@@ -27,6 +27,12 @@ auntie = relations[2][gender]
 relation = choice([niece,sister,auntie])
 animals = [ "dolphin","echidna","rhino","llama","alpaca","penguin","border collie","aardvark","antelope","buffalo","jack russel terrier","cocker spaniel","german shepherd","beagle","basset hound","dalmation","dingo","emu","great dane","kangaroo","pit bull","hairless cat","siamese cat", "hippo","shetland pony","labrador", "chihuahua", "golden retriever", "pomeranian", "gorilla", "weiner dog", "anteater", "capybara", "pigeon", "toucan", "polar bear","corgi","chinchilla","pug","salamander","hamster","hedgehog","iguana","koala","boa constrictor", "tarantula","armadillo", "shiba inu", "spider monkey", "duck", "donkey", "elephant", "badger", "zebra", "fruit bat", "sugar glider", "sloth", "bald eagle","labradoodle" ]
 animal = choice(animals)
+cities = ["Addis Ababa", "Boston", "Brooklyn", "Bronx", "Cairo", "Chicago", "Dallas", "Djibouti", "Edinburgh", "Glasgow", "Hong Kong", "Johannesburg", "New York", "London", "Los Angeles", "Manhattan", "Paris", "Queens", "San Francisco", "Shanghai", "Timbuktu", "Tulsa"]
+
+periodical_topic = [choice(animals).title(), choice(cities), "Astronomical", "Geographic", "Global", "Historical", "Local", "Martian", "Planetary"]
+periodical_type = ["Analysis", "Examinations", "Investigations", "Journal", "Meta-Analysis", "Observations", "Review"]
+periodical_time = ["Weekly", "Monthly", "Quarterly"]
+periodical = " ".join([choice(periodical_topic), choice(periodical_type), choice(periodical_time)])
 
 stuffcarmensteals = [
 "your " + relation + " " + name,
@@ -34,6 +40,7 @@ stuffcarmensteals = [
 "your " + relation + " " + name,
 "your " + relation + " " + name,
 "your " + relation + " " + name,
+"your copy of " + periodical,
 "your ambition",
 "your beanie baby collection",
 "your car",
@@ -46,15 +53,18 @@ stuffcarmensteals = [
 "your last ice cube",
 "your leftovers",
 "your maid",
+"your mail",
 "your mojo",
 "your motivation",
 "your pants",
 "your parking spot",
+"your prized copy of " + periodical,
 "your " + animal,
 "your " + animal,
 "your " + animal,
 "your " + animal,
 "your " + animal,
+"your rare edition of " + periodical,
 "your sanity",
 "your scotch",
 "your sense of humor",
