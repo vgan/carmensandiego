@@ -29,7 +29,7 @@ animals = [ "dolphin","echidna","rhino","llama","alpaca","penguin","border colli
 animal = choice(animals)
 cities = ["Addis Ababa", "Boston", "Brooklyn", "Bronx", "Cairo", "Chicago", "Dallas", "Djibouti", "Edinburgh", "Glasgow", "Hong Kong", "Johannesburg", "New York", "London", "Los Angeles", "Manhattan", "Paris", "Queens", "San Francisco", "Shanghai", "Timbuktu", "Tulsa"]
 
-periodical_topic = [choice(animals).capitalize(), choice(cities), "Astronomical", "Geographic", "Global", "Historical", "Local", "Martian", "Planetary"]
+periodical_topic = [choice(animals).title(), choice(cities), "Astronomical", "Geographic", "Global", "Historical", "Local", "Martian", "Planetary"]
 periodical_type = ["Analysis", "Examinations", "Investigations", "Journal", "Meta-Analysis", "Observations", "Review"]
 periodical_time = ["Weekly", "Monthly", "Quarterly"]
 periodical = " ".join([choice(periodical_topic), choice(periodical_type), choice(periodical_time)])
