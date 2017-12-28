@@ -31,8 +31,11 @@ cities = ["Addis Ababa", "Boston", "Brooklyn", "Bronx", "Cairo", "Chicago", "Dal
 
 periodical_topic = [choice(animals).title(), choice(cities), "Astronomical", "Geographic", "Global", "Historical", "Local", "Martian", "Planetary"]
 periodical_type = ["Analysis", "Examinations", "Investigations", "Journal", "Meta-Analysis", "Observations", "Review"]
-periodical_time = ["Weekly", "Monthly", "Quarterly"]
+periodical_time = ["Daily", "Weekly", "Monthly", "Quarterly"]
 periodical = " ".join([choice(periodical_topic), choice(periodical_type), choice(periodical_time)])
+
+newspaper_brand = ["Globe", "World", "Times", "Tribune", "Post", "Dispatch", "Journal"]
+newspaper = " ".join(["The", choice(cities), choice(periodical_topic)])
 
 stuffcarmensteals = [
 "your " + relation + " " + name,
@@ -40,7 +43,9 @@ stuffcarmensteals = [
 "your " + relation + " " + name,
 "your " + relation + " " + name,
 "your " + relation + " " + name,
+"your 9/11 edition of " + newspaper,
 "your copy of " + periodical,
+"your copy of today's " + newspaper,
 "your ambition",
 "your beanie baby collection",
 "your car",
@@ -73,6 +78,7 @@ stuffcarmensteals = [
 "your son",
 "your soul",
 "your spot in line for coffee",
+"your subscription to " + newspaper,
 "your wallet",
 "your weed",
 "your will to live",
