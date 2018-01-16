@@ -1,4 +1,5 @@
-from random import choice
+from random import choice, random
+from re import sub
 from mastodon import Mastodon
 
 basedir = "/home/vgan/carmensandiego/"
@@ -14,6 +15,7 @@ woman = choice(women)
 men = [ "Mike","Dave","Ron","Gary","Allen","Peter","Brent","Brad","Dennis","Barry","Terry","Gordan","Jerome","Phil","Steve","Seth","Jerry","Angus","Skyler","Zane","Kevin","Bart","Waldo","Ralph","Drew","Larry","Lester","Marcus" ]
 man = choice(men)
 
+chance_of_jorts = 0.05 # 1 in 20
 genders = [ 0,1 ]
 gender = choice(genders)
 if gender == 0:
@@ -88,6 +90,7 @@ stuffcarmensteals = [
 "your scotch",
 "your seat",
 "your sense of humor",
+"your shorts",
 "your sight",
 "your signed Toto Africa 7\"",
 "your social security number",
@@ -100,6 +103,13 @@ stuffcarmensteals = [
 "your will to live",
 ]
 
-toot_text = "OH NO! CARMEN SANDIEGO HAS STOLEN " + choice(stuffcarmensteals) + "!"
+thing_stolen = choice(stuffcarmensteals)
+
+if random() < chance_of_jorts:
+    thing_stolen = sub('^your ([bcdfghk-np-tv-z][bcdfghj-np-tv-z]?|)(?!j)(\w+)$',
+                       'your j\\2 (jean \\1\\2)',
+                       thing_stolen)
+
+toot_text = "OH NO! CARMEN SANDIEGO HAS STOLEN " + thing_stolen + "!"
 
 status = mastodon.status_post(toot_text)                                                                               
